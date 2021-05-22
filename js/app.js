@@ -12,11 +12,9 @@ form.addEventListener('submit', function(event) {
   let cuenta = document.querySelector('.cuenta').value;
   let cuentaPatrimonial = document.querySelector('.cuentaPatrimonial').value;
   let monto = document.querySelector('.monto').value;
+  let debe = document.querySelector('.debe');
+  let haber = document.querySelector('.haber');
 
-  // Selecciona la tabla, filas y celdas
-  let tabla = document.querySelector('.table');
-  let fila = document.querySelector('.table__tr');
-  let celda = document.querySelector('.table__tr--td');
 
   // Define y crea nueva filas, con sus
   // respectivas celdas
@@ -24,38 +22,56 @@ form.addEventListener('submit', function(event) {
   let nuevaFecha = document.createElement('td');
   let nuevaCuenta = document.createElement('td');
   let nuevaCuentaPatrimonial = document.createElement('td');
-  let nuevoMonto = document.createElement('td');
+  let montoDebe = document.createElement('td');
+  let montoHaber = document.createElement('td');
 
-  nuevaFecha.innerHTML = (fecha);
-  nuevaCuenta.innerHTML = (cuenta);
-  nuevaCuentaPatrimonial.innerHTML = (cuentaPatrimonial);
-  nueva 
+  // Selecciona la tabla, filas y celdas
+  let tabla = document.querySelector('.table');
+  let tbody = document.querySelector('.tbody');
 
+  
+  // Modifico los datos de las 
+  // nuevas celdas
+  nuevaFecha.innerHTML = fecha;
+  nuevaCuenta.innerHTML = cuenta;
+  nuevaCuentaPatrimonial.innerHTML = cuentaPatrimonial;
+  
 
+  // Añado las filas y celdas
+  // en la página
+  tabla.appendChild(tbody);
+  tbody.appendChild(filaNueva);
+  filaNueva.appendChild(nuevaFecha);
+  filaNueva.appendChild(nuevaCuentaPatrimonial);
+  filaNueva.appendChild(nuevaCuenta);
 
+  // Sentencia, donde checkeo si está
+  // seleccionada la opción de debe o haber,
+  // con su respectiva acción
+  if (debe.checked){
+    montoDebe.innerHTML = monto;
+    filaNueva.appendChild(montoDebe);
+    montoHaber.innerHTML = '---';
+    filaNueva.appendChild(montoHaber);
+    nuevaCuenta.classList.add('textoIzquierda');
+  } else if(haber.checked){
+    nuevaCuenta.classList.add('textoIzquierda');
+    nuevaCuenta.classList.add('sangria');
+    montoDebe.innerHTML = '---';
+    filaNueva.appendChild(montoDebe);
+    montoHaber.innerHTML = monto;
+    filaNueva.appendChild(montoHaber);
+  }else {
+    alert('¡Selecciona si va en el debe o haber!');
+    filaNueva.removeChild(nuevaFecha);
+    filaNueva.removeChild(nuevaCuentaPatrimonial);
+    filaNueva.removeChild(nuevaCuenta);
+  };
 
+  // Establezco clases para las celdas
+  nuevaFecha.classList.add('table__tr--td');
+  nuevaCuenta.classList.add('table__tr--td');
+  nuevaCuentaPatrimonial.classList.add('table__tr--td');
+  montoDebe.classList.add('table__tr--td');
+  montoHaber.classList.add('table__tr--td');
 });
-
-
-
-//
-// let botonCrearTabla = document.querySelector('.botonCrearTabla');
-//
-// botonCrearTabla.addEventListener('click', function() {
-//   // Selecciona el div padre de la tabla
-//   let divDeTabla = document.querySelector('.prueba');
-//
-//   // Crea la tabla
-//   let fila = document.createElement('tr');
-//   let tabla = document.createElement('table');
-//   let celda = document.createElement('td');
-//
-//   // Obtiene el texto para poner en la celda
-//   let textoCelda = document.querySelector('.pruebaTexto').value;
-//
-//   // Pone la tabla en el documento
-//   divDeTabla.appendChild(tabla);
-//   tabla.appendChild(fila);
-//   fila.appendChild(celda);
-//   celda.innerHTML = ('prueba');
-// })
