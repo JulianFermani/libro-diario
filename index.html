@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Libro Diario</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <h1 class="h1">Libro Diario</h1>
+  <form class="form" action="index.html" method="post">
+    <ul>
+      <li>
+        <div class="ul__li__div">
+          <label for="fecha">Ingrese su fecha</label>
+          <input class="fecha" type="text" name="fecha">
+      </div>
+      </li>
+      <li>
+        <div class="ul__li__div">
+          <label for="cuenta">Ingrese su cuenta</label>
+          <input class="cuenta" type="text" name="cuenta">
+        </div>
+      </li>
+      <li>
+        <div class="ul__li__div">
+          <label for="cuentaPatrimonial">Cuenta patrimonial</label>
+          <input class="cuentaPatrimonial" type="text" name="cuentaPatrimonial" value="">
+        </div>
+      </li>
+      <li>
+        <div class="ul__li__div">
+          <label for="monto">Ingrese el monto</label>
+          <input class="monto" type="text" name="monto" value="">
+        </div>
+      </li>
+      <li>
+        <div class="ul__li__div div-5">
+          <label for="debe">Debe</label>
+          <input class="debe" type="radio" name="debe" value="debe">
+          <label for="haber">Haber</label>
+          <input class="haber" type="radio" name="haber" value="haber">
+        </div>
+      </li>
+      <li>
+        <div class="ul__li__div div-6">
+          <input type="submit" name="" value="Agregar">
+        </div>
+      </li>
+    </ul>
+  </form>
+  <table class="table">
+    <tr class="table__tr">
+      <td class="table__tr--td">Fecha</td>
+      <td class="table__tr--td">Cuentas</td>
+      <td class="table__tr--td">Debe</td>
+      <td class="table__tr--td">Haber</td>
+    </tr>
+  </table>
+  <!-- <div class="prueba">
+
+  </div>
+  <input class="pruebaTexto" type="text" name="pruebaTexto" value="">
+  <input class="botonCrearTabla" type="button" name="" value="Crear Tabla"> -->
+  <script src="js/app.js" charset="utf-8"></script>
+</body>
+</html>
