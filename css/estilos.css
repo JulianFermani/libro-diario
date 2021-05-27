@@ -32,6 +32,10 @@ ul{
   margin: 1.3rem 1rem 1rem 5.3rem;
 }
 
+.div-7{
+  margin-top: 1.3rem;
+}
+
 .table{
   display: flex;
   justify-content: center;
@@ -69,4 +73,9 @@ td {
 
 .textoIzquierda{
   text-align: left;
+}
+
+.limpiarTodo{
+  background-color: #C70039;
+  color: #ffffff;
 }
