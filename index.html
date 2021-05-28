@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +10,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap"
     rel="stylesheet">
 </head>
-
 <body>
   <h1 class="h1">Libro Diario</h1>
   <form class="form" action="index.html" method="post">
@@ -53,25 +51,34 @@
           <input class="botonEnviarForm" type="submit" name="name" value="Agregar">
         </div>
       </li>
-      <li>
-       <div class="ul__li__div div-7">
-          <input class="limpiarTodo" type="submit" name="limpiarTodo" value="Limpiar todo">
-       </div>
-      </li>
     </ul>
   </form>
   <table class="table">
-      <tr class="table__tr">
-        <td class="table__tr--td">Fecha</td>
-        <td class="table__tr--td">Cta Patrimonial</td>
-        <td class="table__tr--td">Cuentas</td>
-        <td class="table__tr--td">Debe</td>
-        <td class="table__tr--td">Haber</td>
-      </tr>
-      <tbody class="tbody">
+    <tr class="table__tr">
+      <td class="table__tr--td">Fecha</td>
+      <td class="table__tr--td">Cta Patrimonial</td>
+      <td class="table__tr--td">Cuentas</td>
+      <td class="table__tr--td">Debe</td>
+      <td class="table__tr--td">Haber</td>
+    </tr>
+    <tbody class="tbody">
     </tbody>
+    <tr class="totalDebeyHaber ocultar">
+      <td class="table__tr--td">---</td>
+      <td class="table__tr--td">---</td>
+      <td class="table__tr--td">Total Debe y Haber</td>
+      <td class="table__tr--td tdDebe"></td>
+      <td class="table__tr--td tdHaber"></td>
+    </tr>
   </table>
+  <div class="clasesBotones">
+    <div class="ul__li__div div-7">
+      <input class="limpiarTodo ocultar" type="submit" name="limpiarTodo" value="Limpiar todo">
+    </div>
+    <div class="divSumarTotal">
+      <input class="sumarTotal ocultar" type="submit" name="sumarTotalDebe" value="Sumar el total de ambos">
+    </div>
+  </div>
   <script src="js/app.js" charset="utf-8"></script>
 </body>
-
 </html>
